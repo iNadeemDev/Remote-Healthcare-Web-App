@@ -1,0 +1,279 @@
+body{
+	font-family: 'Roboto', sans-serif;
+}
+a {
+    text-decoration: none;
+}
+.header-styles {
+    background-color: #DFB57A;
+    padding: 500px;
+}
+.car-heading {
+    font-weight: 1000;
+}
+.car-caption {
+    font-weight: 600;
+}
+.active-nav-link{
+    background-color: #0097e6;
+    font-size: 20px;
+}
+/* CSS for Specialities */
+.specialities .card-title{
+    font-weight: 600;
+    font-size: 13px;
+}
+/* PRICING TABLE CSS */
+.pricingTable{
+    background-color: #fff;
+    font-family: 'Lato', sans-serif;
+    text-align: center;
+    padding: 0 0 30px;
+    margin: 25px 15px 0;
+    border: 1px solid #fff;
+    border-radius: 20px 20px 0 0;
+    box-shadow: 0 4px 8px 4px rgba(0, 0, 0, 0.2), 0 6px 20px 4px rgba(0, 0, 0, 0.19);
+    position: relative;
+    transition: all 0.3s;
+}
+.pricingTable:after{
+    content: "";
+    background: linear-gradient(to left,#0097e6,#0652DD);
+    height: 20px;
+    margin: 0 auto;
+    border-radius: 0 0 15px 15px;
+    position: absolute;
+    right: 0;
+    bottom: -20px;
+    left: 0;
+}
+.pricingTable .pricingTable-header{
+    margin: 0 0 25px;
+    position: relative;
+    z-index: 1;
+}
+.pricingTable .pricingTable-header:before,
+.pricingTable .pricingTable-header:after{
+    content: "";
+    background: #fff;
+    width: 47%;
+    height: 29px;
+    border-radius: 0 20px 20px 0;
+    position: absolute;
+    bottom: -29px;
+    left: 0;
+}
+.pricingTable .pricingTable-header:after{
+    border-radius: 20px 0 0 20px;
+    left: auto;
+    right: 0;
+}
+.pricingTable .title{
+    color: #fff;
+    background: linear-gradient(to left,#0097e6,#0652DD);
+    font-size: 25px;
+    font-weight: 250;
+    letter-spacing: 1px;
+    text-transform: uppercase;
+    width: 80%;
+    padding: 16px 12px;
+    margin: -25px auto 0;
+    border-radius: 50px;
+    position: relative;
+}
+.pricingTable .title:before{
+    content: "";
+    background: linear-gradient(to left,#0097e6,#0652DD);
+    width: 55px;
+    height: 38px;
+    transform: translateX(-50%);
+    position: absolute;
+    bottom: -28px;
+    left: 50%;
+    z-index: -1;
+}
+.pricingTable .price-value{
+    color: #222;
+    background: linear-gradient(to left,#0097e6,#0652DD);
+    line-height: 123px;
+    width: 130px;
+    height: 130px;
+    margin: 0 auto 20px;
+    border-radius: 50%;
+    position: relative;
+    z-index: 1;
+}
+.pricingTable .price-value:before{
+    content: "";
+    background: #fff;
+    width: 105px;
+    height: 105px;
+    border-radius: 50px;
+    position: absolute;
+    top: 13px;
+    left: 13px;
+    z-index: -1;
+}
+.pricingTable .currency{
+    font-size: 15px;
+    vertical-align: top;
+    margin: -10px 0 0;
+    display: inline-block;
+}
+.pricingTable .amount{
+    font-size: 20px;
+    font-weight: 300;
+    display: inline-block;
+}
+.pricingTable .pricing-content{
+    padding: 0 15px;
+    margin: 0 0 30px;
+    list-style: none;
+}
+.pricingTable .pricing-content li{
+    color: #333;
+    font-size: 13px;
+    text-align: left;
+    line-height: 40px;
+    text-transform: uppercase;
+    padding:0 0 0 35px;
+    margin-bottom: 10px;
+    position: relative;
+}
+.pricingTable .pricing-content li:last-child{ margin: 0; }
+.pricingTable .pricing-content li:before,
+.pricingTable .pricing-content li:after{
+    content: "";
+    background: linear-gradient(to left,#0097e6,#0652DD);
+    width: 25px;
+    height: 12px;
+    border-radius: 20px;
+    position: absolute;
+    top: 15px;
+    left: 0;
+}
+.pricingTable .pricing-content li:after{
+    background: #fff;
+    width: 7px;
+    height: 7px;
+    top: 17px;
+    left: 4px;
+}
+.pricingTable .pricingTable-signup a{
+    color: #fff;
+    background: #7e7e7e;
+    font-size: 25px;
+    font-weight: 600;
+    text-transform: uppercase;
+    padding: 12px 25px;
+    border-radius: 50px;
+    transition: all 0.3s ease 0s;
+}
+.pricingTable .pricingTable-signup a:hover{
+    background: linear-gradient(to left,#0097e6,#0652DD);
+    box-shadow: 0 0 5px rgba(0,0,0,0.8);
+}
+.pricingTable.yellow:after,
+.pricingTable.yellow .title,
+.pricingTable.yellow .title:before,
+.pricingTable.yellow .price-value,
+.pricingTable.yellow .pricing-content li:before,
+.pricingTable.yellow .pricingTable-signup a:hover{
+    background: linear-gradient(to left,#fe8c00,#f83600);
+}
+.pricingTable.pink:after,
+.pricingTable.pink .title,
+.pricingTable.pink .title:before,
+.pricingTable.pink .price-value,
+.pricingTable.pink .pricing-content li:before,
+.pricingTable.pink .pricingTable-signup a:hover{
+    background: linear-gradient(to left, #ff6b06, #ff016b);
+}
+@media only screen and (max-width: 990px){
+    .pricingTable{ margin: 25px 0 80px; }
+}
+@media screen and (max-width:767px) {
+    .pricingTable .pricingTable-header:before,
+    .pricingTable .pricingTable-header:after{
+        width: 48.6%;
+    }
+    .pricingTable .pricing-content{
+        display: inline-block;
+        text-align: center;
+    }
+}
+@media screen and (max-width:479px) {
+    .pricingTable .pricingTable-header:before,
+    .pricingTable .pricingTable-header:after{
+        width: 47%;
+    }
+}
+/*PRICING TABLE CSS ENDS HERE */
+
+/* Newsletter CSS starts here */
+.newsletter {
+    padding: 15px 0;
+    background: #19da49;
+    }
+    
+.newsletter .content {
+    max-width: 650px;
+    margin: 0 auto;
+    text-align: center;
+    position: relative;
+    z-index: 2; }
+.newsletter .content h2 {
+    color: #243c4f;
+    margin-bottom: 30px; }
+.newsletter .content .form-control {
+    height: 50px;
+    border-color: #ffffff;
+    border-radius:0;
+    }
+.newsletter .content.form-control:focus {
+    box-shadow: none;
+    border: 2px solid #243c4f;
+    }
+.newsletter .content .btn {
+    min-height: 50px; 
+    border-radius:0;
+    background: #243c4f;
+    color: #fff;
+    font-weight:600;
+    }
+    /* Newsletter CSS ends here */
+
+
+
+/* Partners Scetion CSS starts here */
+.partners img{
+    margin: 3px;
+    box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2), 0 6px 20px 0 rgba(0, 0, 0, 0.19);
+}
+
+/*Footer CSS */
+footer{
+    text-align: left;
+}
+.footer a{
+    color: black;
+    text-decoration: none;
+}
+.footer li{    
+    list-style-type: none;
+    padding: 9px 0px;
+}
+.footer ul{
+    margin: 0;
+    padding: 0;
+}
+.footer input {
+    background-color: rgb(193, 226, 233);
+}
+.footer textarea {
+    background-color: rgb(193, 226, 233);
+}
+.social i {
+    font-size: 40px;
+}
+

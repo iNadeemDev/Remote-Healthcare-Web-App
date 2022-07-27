@@ -1,0 +1,29 @@
+.orders-container {
+	padding: 10px;
+	min-height: 100%;
+
+	.orders-content {
+		display: flex;
+		flex-wrap: wrap;
+		justify-content: space-evenly;
+		align-content: flex-start;
+		gap: 10px;
+		padding: 10px;
+	}
+
+	.card-body {
+		overflow: hidden;
+		background: rgba($color: white, $alpha: 0.6);
+		max-width: 350px;
+		width: 100%;
+		border-radius: 20px;
+
+		.table-wrapper{
+			background-color: #212529;
+			display: block;
+			height: 200px;
+			overflow: auto;
+
+		}
+	}
+}

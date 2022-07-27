@@ -1,0 +1,417 @@
+﻿/*#region Main*/
+
+.ph-flex-container {
+	display: flex;
+	padding: 10px;
+	gap: 20px;
+
+	.container {
+		flex: 70%;
+
+		.search-container {
+			display: flex;
+
+			.txtSearch {
+				padding: 5px;
+				font-size: 15px;
+			}
+
+			.btnSearch {
+				width: 30px;
+				padding: 5px;
+				background: #ccc;
+				font-size: 15px;
+				cursor: pointer;
+				display: flex;
+				align-items: center;
+				justify-content: center;
+
+				&:hover {
+					background: #bbb;
+				}
+
+				&:active {
+					background: #aaa;
+				}
+			}
+		}
+
+		.table-bordered {
+			backdrop-filter: blur(5px);
+
+			input {
+				width: 22.5px;
+				height: 22.5px;
+			}
+		}
+
+		.ph-btn {
+			padding: 5px;
+			font-size: 15px;
+			background: #ccc;
+			cursor: pointer;
+
+			&:hover {
+				background: #bbb;
+			}
+
+			&:active {
+				background: #aaa;
+			}
+		}
+	}
+}
+
+/*#endregion*/
+
+/*#region Table */
+
+.table-container {
+	height: 400px;
+	width: 100%;
+	margin: 10px 0;
+	overflow: hidden;
+
+	table {
+		backdrop-filter: blur(7px);
+	}
+}
+
+$scrollbarWidth: 15px;
+
+.table-fixed {
+	table-layout: fixed;
+	width: 100%;
+	color: white;
+
+	thead {
+		font-family: "Lucida Sans", "Lucida Sans Regular", "Lucida Grande", "Lucida Sans Unicode", Geneva, Verdana,
+			sans-serif;
+
+		tr {
+			width: calc(100% - #{$scrollbarWidth} - 2px);
+			box-shadow: 0px 0px 10px 15px rgba(0, 0, 0, 0.68) inset;
+			display: flex;
+			cursor: default;
+
+			th {
+				flex: 1;
+				font-size: 15px;
+				min-height: 40px;
+				background: none;
+				width: 25%;
+				padding: 5px;
+				border: none;
+				display: flex;
+				align-items: center;
+
+				&:nth-last-of-type(2) {
+					flex: 0 0 72px;
+				}
+
+				&:last-of-type {
+					padding: 0;
+					flex: 0 0 0;
+				}
+			}
+		}
+
+		&:after {
+			content: " ";
+			display: block;
+			height: 5px;
+			color: transparent;
+		}
+	}
+
+	tbody {
+		display: block;
+		width: 100%;
+		overflow-y: scroll;
+		overflow-x: hidden;
+		height: 350px !important;
+
+		tr {
+			display: flex;
+			cursor: default;
+			background: #212529;
+			border-bottom: 1px solid #373b3e;
+
+			td {
+				flex: 1;
+				width: 0;
+				font-size: 15px;
+				padding: 5px;
+				display: flex;
+				justify-content: flex-start;
+				align-items: center;
+
+				&:nth-last-of-type(2),
+				&:last-of-type {
+					flex: 0 0 36px;
+
+					input {
+						height: 26px;
+						width: 26px;
+						padding: 2px;
+					}
+				}
+
+				&:nth-last-of-type(2) {
+					input {
+						background-color: rgba($color: blue, $alpha: 0.5);
+					}
+				}
+
+				&:last-of-type {
+					input {
+						background-color: rgba($color: red, $alpha: 0.5);
+					}
+				}
+			}
+		}
+
+		.selected-row {
+			border: 1px solid white;
+			background: #555;
+
+			td {
+				&:nth-last-of-type(2) {
+					input {
+						background-color: rgba($color: blue, $alpha: 0.7);
+					}
+				}
+
+				&:last-of-type {
+					input {
+						background-color: rgba($color: red, $alpha: 0.7);
+					}
+				}
+			}
+		}
+
+		&::-webkit-scrollbar {
+			width: $scrollbarWidth;
+		}
+
+		&::-webkit-scrollbar-track {
+			background-color: #aaa;
+			box-shadow: 0px 0px 6px 3px rgba(0, 0, 0, 0.5) inset;
+		}
+
+		&::-webkit-scrollbar-thumb {
+			border: 3px solid transparent;
+			background-clip: content-box;
+			background-color: rgb(70, 70, 70);
+			box-shadow: 0px 0px 5px 2px rgba(0, 0, 0, 0.75) inset;
+
+			&:hover {
+				background-color: rgb(50, 50, 50);
+			}
+		}
+
+		&::-webkit-scrollbar-button {
+			width: 0;
+			height: 0;
+		}
+	}
+}
+
+/*#endregion */
+
+/*#region Helpers*/
+.noselect {
+	user-select: none;
+}
+
+.flex-centered {
+	display: flex;
+	justify-content: center;
+	align-items: center;
+}
+
+.flex-spacehor {
+	display: flex;
+	flex-direction: row;
+	justify-content: space-between;
+	align-items: center;
+}
+
+.flex-wrap {
+	flex-wrap: wrap;
+}
+
+.content-title {
+	width: 100%;
+	text-align: center;
+	background-color: #212529;
+	padding: 6px;
+	margin-bottom: 10px;
+	border: 1px solid white;
+
+	span {
+		color: white;
+		font-weight: 400;
+		font-size: 25px;
+	}
+}
+
+.lbl-sel {
+	color: #fff;
+	font-size: 18px;
+	font-family: Verdana;
+}
+
+/*#endregion */
+
+/*#region Media Queries */
+
+@include media-mixin(max, 992px) {
+	.ph-flex-container {
+		flex-direction: column;
+	}
+}
+
+/*#endregion */
+
+/*#region Add/Edit/Delete Medicine Form */
+
+.med-form {
+	position: fixed;
+	inset: 0;
+	background: rgba(0, 0, 0, 0.5);
+	display: none;
+}
+
+.man-meds {
+	display: flex;
+	justify-content: center;
+	align-items: center;
+	flex-direction: column;
+}
+
+.add-meds {
+	border: none;
+	border-radius: 20px;
+	padding: 25px;
+	box-shadow: 0px 0px 10px 2px;
+	width: 80%;
+	max-width: 370px;
+	margin: 20px;
+	background: black;
+	backdrop-filter: blur(8px);
+}
+
+.man-txt-wrapper {
+	margin: 5px;
+	position: relative;
+	width: 100%;
+
+	.man-txt {
+		height: 40px;
+		width: 100%;
+		display: block;
+		padding: 5px;
+		font-size: 17px;
+		color: #fff;
+		background-color: transparent;
+		border-bottom: 2px solid white;
+
+		&:-webkit-autofill {
+			transition: background-color 50000s ease-in-out 0s, color 50000s ease-in-out 0s;
+		}
+
+		&::placeholder {
+			letter-spacing: 0.5px;
+			color: lightgray;
+		}
+
+		&:focus {
+			+ .man-txt-underline {
+				transform: scale(1);
+			}
+
+			&:not(:placeholder-shown) {
+				&:valid {
+					+ .man-txt-underline {
+						background: darken(lime, 10%);
+					}
+				}
+
+				&:invalid {
+					+ .man-txt-underline {
+						background: darken(red, 10%);
+					}
+				}
+			}
+
+			&::placeholder {
+				color: transparent;
+			}
+		}
+	}
+
+	option {
+		color: black;
+	}
+
+	textarea {
+		width: 100% !important;
+		min-height: 40px;
+	}
+
+	.man-txt-underline {
+		background: #3181c5;
+		display: inline-block;
+		height: 2px;
+		left: 0px;
+		right: 0px;
+		bottom: 0px;
+		position: absolute;
+		transform: scale(0, 1);
+		transition: all 0.3s linear;
+	}
+}
+
+.man-img-wrapper {
+	width: 100%;
+	display: flex;
+	align-items: flex-end;
+	gap: 5px;
+	margin: 5px;
+
+	.man-txt-wrapper {
+		flex: 83%;
+		margin: 0;
+	}
+
+	.man-btn {
+		flex: 17%;
+		margin: 0;
+		height: 36px;
+	}
+}
+
+.man-btn,
+.man-lbl {
+	margin: 5px;
+	padding: 5px;
+	font-size: 17px;
+	width: 100%;
+}
+
+.man-btn {
+	cursor: pointer;
+	height: 32px;
+	font-weight: 500;
+	margin-top: 10px;
+}
+
+.man-lbl {
+	background: transparent;
+	border: 1px solid white;
+	color: white;
+	text-align: center;
+}
+
+/*#endregion*/

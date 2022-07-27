@@ -1,0 +1,29 @@
+.topbar {
+    padding: 5px 0;
+    display: flex;
+    justify-content: space-between;
+    border-bottom: 1px solid #fff;
+    & > div{
+        margin: 5px 15px;
+        color: #fff;
+        .right_items{
+            display: inline-block;
+            margin-right: 20px;
+            font-size: 15px;
+            transform: translateY(5px);
+        }
+
+        .left_items{
+            transform: translateY(5px);
+            font-size: 15px;
+            margin-right: 20px;
+            color: #fff;
+
+            &:hover{
+                background-color: grey;
+                border-radius: 8px;
+            }
+
+        }
+    }
+}

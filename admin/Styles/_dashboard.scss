@@ -1,0 +1,81 @@
+.dashboard{
+    padding: 20px;
+    .dashboard-card {
+        background-color: #fff;
+        border-radius: 10px;
+        border: none;
+        position: relative;
+        // margin-bottom: 10px;
+        box-shadow: 0 0.46875rem 2.1875rem rgba(90,97,105,0.1), 0 0.9375rem 1.40625rem rgba(90,97,105,0.1), 0 0.25rem 0.53125rem rgba(90,97,105,0.12), 0 0.125rem 0.1875rem rgba(90,97,105,0.1);
+        .card-statistic-3{
+            /* CSS for BG Icon for Dashboard Cards */
+            .card-icon {
+                text-align: center;
+                line-height: 50px;
+                margin-left: 15px;
+                color: #000;
+                position: absolute;
+                right: -5px;
+                top: 20px;
+                opacity: 0.1;
+                font-size: 110px;
+            }
+        }
+    }
+}
+// Background colors gradients //
+.color-bg-cherry {
+    background: linear-gradient(to right, #493240, #f09) !important;
+    color: #fff;
+}
+
+.color-bg-blue-dark {
+    background: linear-gradient(to right, #373b44, #4286f4) !important;
+    color: #fff;
+}
+
+.color-bg-green-dark {
+    background: linear-gradient(to right, #0a504a, #38ef7d) !important;
+    color: #fff;
+}
+
+.color-bg-orange-dark {
+    background: linear-gradient(to right, #a86008, #ffba56) !important;
+    color: #fff;
+}
+
+.color-bg-cyan {
+    background: linear-gradient(135deg, #289cf5, #84c0ec) !important;
+    color: #fff;
+}
+
+.color-bg-green {
+    background: linear-gradient(135deg, #23bdb8 0%, #43e794 100%) !important;
+    color: #fff;
+}
+
+.color-bg-orange {
+    background: linear-gradient(to right, #f9900e, #ffba56) !important;
+    color: #fff;
+}
+
+.color-bg-cyan {
+    background: linear-gradient(135deg, #289cf5, #84c0ec) !important;
+    color: #fff;
+}
+.color-bg-blue-green{
+    background-image: linear-gradient(180deg, #2af598 0%, #009efd 100%);
+    color: #fff;
+}
+.color-bg-rainbow{
+    background-image: linear-gradient(to right, #eea2a2 0%, #bbc1bf 19%, #57c6e1 42%, #b49fda 79%, #7ac5d8 100%);
+    color: #fff;
+}
+.color-bg-mixed{
+    background-image: linear-gradient(to top, #4fb576 0%, #44c489 30%, #28a9ae 46%, #28a2b7 59%, #4c7788 71%, #6c4f63 86%, #432c39 100%);
+    color: #fff;
+}
+.color-bg-red-blue{
+    background-image: linear-gradient(to right, #ec77ab 0%, #7873f5 100%);
+    color: #fff;
+}

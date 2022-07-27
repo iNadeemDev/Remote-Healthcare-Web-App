@@ -1,0 +1,141 @@
+.faq-content {
+	font-size: 32px;
+}
+
+.faq-header {
+	color: black;
+
+	h1 {
+		padding: 20px;
+		font-size: 1em;
+		text-align: center;
+		margin-bottom: 10px;
+		text-decoration: underline;
+	}
+}
+
+.faq-main {
+	background-color: #252525;
+	width: 85%;
+	margin: auto;
+	padding: 20px;
+	border-radius: 20px;
+
+	ul {
+		width: 100%;
+		list-style: none;
+		margin: 0;
+		padding: 0;
+
+		li {
+			position: relative;
+			overflow: hidden;
+
+			.head {
+				color: white;
+				display: flex;
+				padding: 10px;
+				align-items: center;
+				justify-content: space-between;
+
+				h1 {
+					font-size: 0.7em;
+					font-weight: 400;
+					margin-bottom: 0;
+				}
+
+				span {
+					margin-left: 10px;
+					width: 0;
+					height: 0;
+					border-left: 7px solid transparent;
+					border-right: 7px solid transparent;
+					border-top: 7px solid white;
+					transition: transform 250ms linear;
+				}
+
+				> * {
+					pointer-events: none;
+					user-select: none;
+				}
+
+				&:hover {
+					h1 {
+						color: #bbb;
+					}
+
+					span {
+						border-left: 7px solid transparent;
+						border-right: 7px solid transparent;
+						border-top: 7px solid #bbb;
+					}
+				}
+			}
+
+			.body {
+				background-color: #444;
+				padding: 10px;
+				border-radius: 10px;
+				display: none;
+				color: white;
+
+				p {
+					margin: 0;
+					font-size: 0.55em;
+					font-weight: lighter;
+				}
+			}
+
+			&.active {
+				.head {
+					span {
+						transform: rotateX(180deg);
+					}
+				}
+			}
+
+			&:not(:last-of-type) {
+				&::before {
+					content: " ";
+					position: absolute;
+					height: 2px;
+					bottom: 10px;
+					width: 100%;
+					background: gray;
+				}
+
+				&::after {
+					content: " ";
+					display: block;
+					line-height: 20px;
+					height: 22px;
+				}
+			}
+		}
+	}
+}
+
+@include media-mixin(max, 768px) {
+	.faq-content {
+		font-size: 26px;
+	}
+
+	.faq-main {
+		width: 90%;
+	}
+}
+
+.div-1 {
+	height: 100px;
+	background: red;
+
+	&:hover {
+		background: pink;
+	}
+}
+
+.div-11 {
+	background: blue;
+	height: 100%;
+	width: 100px;
+}

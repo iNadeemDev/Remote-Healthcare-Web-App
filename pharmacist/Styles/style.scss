@@ -1,0 +1,39 @@
+* {
+	font-family: "Segoe UI", Tahoma, Geneva, Verdana, sans-serif;
+	padding: 0;
+	margin: 0;
+	box-sizing: border-box;
+	outline: none;
+	border: none;
+}
+
+body {
+	background: url(../Images/bg4.jpg) no-repeat center center fixed;
+	background-size: cover;
+}
+
+.header-text {
+	text-align: center;
+	background: linear-gradient(180deg, rgba(black, 0.3), rgba(black, 0.8));
+	padding: 15px;
+	border-bottom: 1px solid white;
+
+	span {
+		color: white;
+		font-weight: 400;
+		font-size: 30px;
+	}
+}
+
+@mixin media-mixin($max-min, $breakpoint) {
+	@media (#{$max-min}-width: #{$breakpoint}) {
+		@content;
+	}
+}
+
+@import "_Main.scss";
+@import "_FAQ.scss";
+@import "_Medicines.scss";
+@import "_Dashboard.scss";
+@import "_Orders.scss";
+
